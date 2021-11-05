@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animation Model</title>
+    <link rel="shortcut icon" href="images/fav_icon.png" type="image/x-icon">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <section class="hero is-info is-medium is-bold">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div id="main-banner" class="title">
+            Animation Model Demo
+          </div>
+          <h2 class="subtitle">
+            Upload your image
+          </h2>
+        </div>
+      </div>
+    </section>
+    <div class="box cta">
+    </div>
+    <section class="container">
+      <div class="columns features">
+        <div class="column is-4">
+          <div class="card is-shady">
+            <div class="card-content">
+              <div class="content">
+                <h4>Image upload</h4>
+                <div class="file is-centered is-boxed is-info has-name">
+                  <label class="file-label">
+                    <input class="file-input"
+                           type="file" name="resume"
+                           onchange="showImage(this)"
+                           accept="image/*">
+                    <span class="file-cta">
+                      <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                      </span>
+                      <span class="file-label">
+                        Upload image...
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-shady">
+            <div class="card-content">
+              <div class="content">
+                <h4>Image preview</h4>
+                  <img id="thumbnail" src="logo.jpg" alt="image-preview"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card is-shady">
+            <div class="card-content">
+              <div class="content">
+                <h4>Video</h4>
+                <video id="video" controls loop>
+                  <source src="video.mp4" type="video/mp4"/>
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
