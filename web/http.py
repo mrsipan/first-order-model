@@ -5,11 +5,13 @@ import pathlib
 import subprocess
 import gdown
 
-if not pathlib.Path((model_file := 'vox-cpk.pth.tar')).is_file():
+model_file = 'vox-cpk.pth.tar'
+
+if not pathlib.Path(model_file).is_file():
     id_file = '1_v_xW1V52gZCZnXgh1Ap_gwA9YVIzUnS'
     gdown.download(
         id=id_file,
-        model_file,
+        output=model_file,
         quiet=False,
         )
 
