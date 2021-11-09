@@ -21,7 +21,7 @@ def do(img_path, video_path):
         'python3 ../demo.py --config ../config/vox-256.yaml'
         ' --driving_video /data/.wink.mp4'
         f' --source_image "{img_path}"'
-        ' --result_video "{video_path}"'
+        f' --result_video "{video_path}"'
         ' --checkpoint vox-cpk.pth.tar --relative --adapt_scale',
         shell=True,
         )
@@ -33,10 +33,11 @@ def model1(bobo_request):
     '''
 
     img = bobo_request.POST['test-image']
+
     with open(f'uploaded/{img.filename}', 'wb') as fp:
         fp.write(img.file.read())
 
-    do('upload/{img.filename}', 'pub/generated.mp4')
+    do('uploaded/{img.filename}', 'pub/generated.mp4')
 
     return dict(path="/pub/generated.mp4")
 
