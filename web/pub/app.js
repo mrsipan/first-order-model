@@ -20,7 +20,7 @@ function showImage (fileInput) {
     const formData = new FormData()
     formData.append('test-image', files[0])
 
-    fetch('/do', {
+    fetch('/model1', {
       method: 'POST',
       body: formData
     })

@@ -37,7 +37,7 @@ def model1(bobo_request):
     with open(f'uploaded/{img.filename}', 'wb') as fp:
         fp.write(img.file.read())
 
-    do('uploaded/{img.filename}', 'pub/generated.mp4')
+    do(f'uploaded/{img.filename}', 'pub/generated.mp4')
 
     return dict(path="/pub/generated.mp4")
 
