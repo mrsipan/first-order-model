@@ -3,13 +3,21 @@ import io
 import json
 import pathlib
 import subprocess
+import gdown
 
+if not pathlib.Path((model_file := 'vox-cpk.pth.tar')).is_file():
+    id_file = '1_v_xW1V52gZCZnXgh1Ap_gwA9YVIzUnS'
+    gdown.download(
+        id=id_file,
+        model_file,
+        quiet=False,
+        )
 
 def do(img_path, video_path):
 
     subprocess.check_call(
         'python3 ../demo.py --config ../config/vox-256.yaml'
-        ' --driving_video driving-video/wink.mp4'
+        ' --driving_video /data/.wink.mp4'
         f' --source_image "{img_path}"'
         ' --result_video "{video_path}"'
         ' --checkpoint vox-cpk.pth.tar --relative --adapt_scale',
