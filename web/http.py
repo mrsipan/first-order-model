@@ -7,6 +7,11 @@ import gdown
 
 model_file = 'vox-cpk.pth.tar'
 
+uploaded = pathlib.cwd() / pathlib.Path('uploaded')
+
+if not uploaded.is_dir():
+    uploaded.mkdir()
+
 if not pathlib.Path(model_file).is_file():
     id_file = '1_v_xW1V52gZCZnXgh1Ap_gwA9YVIzUnS'
     gdown.download(
