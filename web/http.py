@@ -54,7 +54,7 @@ def model2(bobo_request):
 
     rv = []
     for img_path in loc['image_paths']:
-        img_path = pathlib.Path('/data') / pathlib.Path('img_path')
+        img_path = pathlib.Path('/data') / pathlib.Path(img_path)
         video_path = img_path.with_suffix('.mp4').as_posix()
         do(img_path.as_posix(), video_path)
         rv.append(video_path)
