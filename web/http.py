@@ -7,7 +7,7 @@ import gdown
 
 model_file = 'vox-cpk.pth.tar'
 
-uploaded = pathlib.cwd() / pathlib.Path('uploaded')
+uploaded = pathlib.Path.cwd() / pathlib.Path('uploaded')
 
 if not uploaded.is_dir():
     uploaded.mkdir()
