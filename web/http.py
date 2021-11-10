@@ -1,9 +1,10 @@
 import bobo
+import gdown
 import io
 import json
 import pathlib
 import subprocess
-import gdown
+import urllib.parse
 
 model_file = 'vox-cpk.pth.tar'
 
@@ -64,4 +65,6 @@ def model2(bobo_request):
 
 @bobo.query('/')
 def index(bobo_request):
-    return bobo.redirect(bobo_request.url + '/pub/index.html')
+    return bobo.redirect(
+        urllib.parse.urljoin(bobo_request.url, '/pub/index.html')
+        )
