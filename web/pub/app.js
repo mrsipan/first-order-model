@@ -27,12 +27,11 @@ function showImage (fileInput) {
       .then(response => response.json())
       .then(rv => {
         console.log(rv.path)
+        const video = document.getElementById('video')
+        video.src = rv.path
       })
       .catch(error => {
         console.log('Error')
       })
-
-    const video = document.getElementById('video')
-    video.src = rv.path
   }
 }
